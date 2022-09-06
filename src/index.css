@@ -1,13 +1,74 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text: white;
+  --family:cursive;
+  --margin: 10px;
+  --icon: #03d87d;
+  --size:1.2rem;
+  --container:80%;
+  --margun:0 auto;
+  --gradient:radial-gradient(#20346E,black);
+}
+.container_fluid{
+  width: var(--container);
+  margin: var(--margun);
+}
+.gradient{
+  background: var(--gradient);
+}
+.image{
+  background-image: url(./Assets/img11.svg),radial-gradient(#20346E,black);
+  background-size: cover;
+}
+.head {
+  color: var(--text);
+  font-family: var(--family);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ul > li {
+  margin: var(--margin);
+  font-size: var(--size);
+  cursor: pointer;
+  
+}
+ul>li:hover{
+color: #03d87d;
+transition-duration: 1s;
+text-decoration: underline;
+}
+.icon{
+    color: var(--icon);
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 20%;
+  height: 20%;
+  object-fit: cover;
 }
